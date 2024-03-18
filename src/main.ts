@@ -9,24 +9,24 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableCors()
 
-  app.use(helmet.frameguard());
-  app.use(helmet.hidePoweredBy());
-  app.use(helmet.ieNoOpen());
-  app.use(helmet.noSniff());
-  app.use(helmet.xssFilter());
-  app.use(helmet.contentSecurityPolicy());
-  app.use(helmet.crossOriginEmbedderPolicy());
-  app.use(helmet.crossOriginOpenerPolicy());
-  app.use(helmet.crossOriginResourcePolicy());
-  app.use(
-    helmet.dnsPrefetchControl({
-      allow: true,
-    })
-  );
+  // app.use(helmet.frameguard());
+  // app.use(helmet.hidePoweredBy());
+  // app.use(helmet.ieNoOpen());
+  // app.use(helmet.noSniff());
+  // app.use(helmet.xssFilter());
+  // app.use(helmet.contentSecurityPolicy());
+  // app.use(helmet.crossOriginEmbedderPolicy());
+  // app.use(helmet.crossOriginOpenerPolicy());
+  // app.use(helmet.crossOriginResourcePolicy());
+  // app.use(
+  //   helmet.dnsPrefetchControl({
+  //     allow: true,
+  //   })
+  // );
 
-  app.use(helmet.originAgentCluster());
-  app.use(helmet.permittedCrossDomainPolicies());
-  app.use(helmet.referrerPolicy());
+  // app.use(helmet.originAgentCluster());
+  // app.use(helmet.permittedCrossDomainPolicies());
+  // app.use(helmet.referrerPolicy());
   // const limiter = rateLimit({
   //   windowMs: 1 * 60 * 1000,
   //   max: 150,
